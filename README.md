@@ -5,16 +5,20 @@ Track your daily tasks, visualise progress with live charts, and export a PDF sn
 
 ---
 
+## 📸 Dashboard Preview
+
+![Goal Tracker Dashboard](https://raw.githubusercontent.com/GADEKAR328/Goal-Tracker-Dahboard-/9fb4975a6f7d92819854b0725aed7ebee28ea069/Screenshot%20-%20Goal-Tracker-Dahboard-_.jpg)
+
+---
+
 ## 📁 Project Structure
 
-```
 weekly-task-dashboard/
 ├── index.html      ← Main page (HTML structure)
 ├── style.css       ← All styles and CSS variables
 ├── script.js       ← All logic: clock, charts, task state, PDF export
 ├── banner.jpg      ← Motivational banner image
 └── README.md       ← This file
-```
 
 ---
 
