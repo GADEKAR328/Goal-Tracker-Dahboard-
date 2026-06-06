@@ -1,7 +1,20 @@
 # 🎯 Goal Tracker Pro — Weekly Task Dashboard
 
-A personal weekly productivity tracker built with vanilla HTML, CSS, and JavaScript.
-Track your daily tasks, visualise progress with live charts, and export a PDF snapshot — all saved in your browser.
+![Goal Tracker Pro Banner](https://raw.githubusercontent.com/GADEKAR328/Goal-Tracker-Dahboard-/1509faa86e366a607705510e4fc88cf8ad6296fd/banner.jpg)
+
+A modern personal productivity dashboard built with **HTML, CSS, and JavaScript**.
+
+Track goals, manage weekly tasks, visualize progress with live analytics, and stay focused on what matters most — all directly in your browser with no backend required.
+
+---
+
+## 🌐 Live Demo
+
+👉 **Launch Goal Tracker Pro**
+
+https://gadekar328.github.io/Goal-Tracker-Dahboard-/
+
+[![Live Demo](https://img.shields.io/badge/Live-Demo-success?style=for-the-badge)](https://gadekar328.github.io/Goal-Tracker-Dahboard-/)
 
 ---
 
@@ -11,90 +24,191 @@ Track your daily tasks, visualise progress with live charts, and export a PDF sn
 
 ---
 
-## 📁 Project Structure
+## ✨ Features
 
-weekly-task-dashboard/
-├── index.html      ← Main page (HTML structure)
-├── style.css       ← All styles and CSS variables
-├── script.js       ← All logic: clock, charts, task state, PDF export
-├── banner.jpg      ← Motivational banner image
-└── README.md       ← This file
+| Feature | Description |
+|----------|-------------|
+| 🎯 Goal Management | Set and track personal goals |
+| 👤 Profile Card | Store personal information and life goals |
+| ⏱ Live Day Progress Ring | Visual representation of daily progress |
+| 📊 KPI Dashboard | Track completed %, pending %, total tasks, and performance |
+| 🍩 Donut Chart | View completed vs pending tasks visually |
+| 📈 Weekly Trend Analysis | Monitor productivity trends throughout the week |
+| ✅ Weekly Task Checklist | Track tasks across all seven days |
+| 💾 Auto Save | Progress automatically saved using localStorage |
+| 📄 PDF Export | Export dashboard reports instantly |
+| 📱 Responsive Design | Works across desktop, tablet, and mobile devices |
 
 ---
 
-## ✨ Features
+## 📁 Project Structure
 
-| Feature | Details |
-|---|---|
-| 👤 Profile Card | Name, birthdate (auto-calculates age), gender, life goal |
-| ⏱ 24-hr Day Ring | Canvas-drawn ring showing % of the day elapsed, live clock |
-| 📊 KPI Cards | Completed %, Pending %, Total Tasks, Best Day, Avg/Day, Week Score |
-| 🍩 Donut Chart | Overall completed vs pending (Chart.js) |
-| 📈 Line Chart | Daily % completion trend across the week (Chart.js) |
-| ✅ Weekly Checklist | 15 tasks × 7 days, colour-coded per day |
-| 💾 Auto-save | Progress persisted in `localStorage` — survives page refresh |
-| 📄 PDF Export | One-click A4 landscape PDF via jsPDF + html2canvas |
+```text
+Goal-Tracker-Dashboard/
+├── index.html
+├── style.css
+├── script.js
+├── banner.jpg
+├── Screenshot - Goal-Tracker-Dahboard-_.jpg
+└── README.md
+```
 
 ---
 
 ## 🚀 Getting Started
 
-### Option 1 — Open locally
-Just double-click `index.html` in your file explorer. No server needed.
+### Run Locally
 
-### Option 2 — GitHub Pages (recommended)
-1. Push this folder to a GitHub repository.
-2. Go to **Settings → Pages**.
-3. Set source to **main branch / root**.
-4. Your dashboard will be live at `https://<your-username>.github.io/<repo-name>/`.
+1. Clone the repository:
 
----
+```bash
+git clone https://github.com/GADEKAR328/Goal-Tracker-Dahboard-.git
+```
 
-## 📦 Dependencies (loaded via CDN)
+2. Open the project folder.
 
-| Library | Version | Purpose |
-|---|---|---|
-| [Chart.js](https://www.chartjs.org/) | 4.4.1 | Donut & line charts |
-| [jsPDF](https://github.com/parallax/jsPDF) | 2.5.1 | PDF generation |
-| [html2canvas](https://html2canvas.hertzen.com/) | 1.4.1 | Page screenshot for PDF |
+3. Open `index.html` in your browser.
 
-All CDN links are in `index.html` — no `npm install` needed.
+No installation required.
 
 ---
 
-## 🛠 Customisation
+### Deploy with GitHub Pages
 
-**Change the task list** — edit the `TASKS` array in `script.js`:
-```js
+1. Push the repository to GitHub.
+2. Open **Settings → Pages**.
+3. Select **Deploy from a branch**.
+4. Choose **main** branch and **/(root)** folder.
+5. Save.
+
+Your dashboard will be published online.
+
+---
+
+## 📦 Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript (ES6)
+- Chart.js
+- jsPDF
+- html2canvas
+- GitHub Pages
+
+---
+
+## 📊 Dashboard Components
+
+### 👤 Profile Section
+- User information
+- Life goals
+- Personal details
+
+### ⏱ Daily Progress Ring
+- Real-time clock
+- Day completion percentage
+
+### 📈 Analytics Dashboard
+- Completion Rate
+- Pending Tasks
+- Weekly Score
+- Best Day Performance
+
+### 🍩 Donut Chart
+- Completed vs Pending Tasks
+
+### 📈 Trend Chart
+- Daily productivity tracking
+
+### ✅ Weekly Task Tracker
+- Track tasks across all seven days
+- Instant progress updates
+
+### 💾 Auto Save
+- Data stored using browser localStorage
+- Progress remains after page refresh
+
+### 📄 PDF Export
+- Export dashboard snapshot with one click
+
+---
+
+## 🛠 Customization
+
+### Edit Tasks
+
+Open `script.js` and modify:
+
+```javascript
 const TASKS = [
   "Plan Daily Tasks",
-  "Check Emails & Reply",
-  // ... add or remove tasks here
+  "Exercise",
+  "Study",
+  "Read Books",
+  "Review Goals"
 ];
 ```
 
-**Change colours** — edit the CSS variables at the top of `style.css`:
+### Change Theme Colors
+
+Open `style.css` and update:
+
 ```css
 :root {
-  --navy:  #1e3a5f;
-  --teal:  #0d9488;
+  --navy: #1e3a5f;
+  --teal: #0d9488;
   --coral: #c0392b;
-  /* ... */
 }
 ```
 
-**Reset weekly progress** — open browser DevTools console and run:
-```js
-localStorage.removeItem('gtd_yg_v3');
+### Reset Dashboard Data
+
+Open browser console and run:
+
+```javascript
+localStorage.clear();
 location.reload();
 ```
 
 ---
 
-## 📄 License
+## 🌟 Benefits
 
-MIT — free to use and modify.
+- Improve productivity
+- Build consistent habits
+- Stay organized
+- Track progress visually
+- Increase accountability
+- Monitor weekly performance
 
 ---
 
-*Built by Yogesh Gadekar · Goal Tracker Pro · Special Edition · 2026*
+## 🤝 Contributing
+
+Contributions are welcome.
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Open a Pull Request
+
+---
+
+## 📄 License
+
+MIT License
+
+Free to use, modify, and distribute.
+
+---
+
+## 👨‍💻 Author
+
+**Yogesh Gadekar**
+
+GitHub: https://github.com/GADEKAR328
+LinkedIn: https://www.linkedin.com/in/yogesh-gadekar-a1231b189/
+
+---
+
+⭐ If you found this project useful, consider giving it a star.
